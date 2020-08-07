@@ -3,8 +3,9 @@ import os
 import sys
 from telethon.sessions import StringSession
 from telethon import TelegramClient
-from userbot.helpers import fonts as fonts
-from userbot.helpers import functions as catdef
+from .helpers import fonts as fonts
+from .helpers import functions as catdef
+from .helpers import process as process
 
 from var import Var
 
