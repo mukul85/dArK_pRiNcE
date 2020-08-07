@@ -18,7 +18,7 @@ async def stickerchat(darkquotes):
     fetchmsg = reply.message
     repliedreply = await reply.get_reply_message()
     if reply.media:
-        if "tgsticker" or "mp4" in reply.media.document.mime_type:
+        if reply.media.document.mime_type in ('tgsticker', 'mp4'):
             await darkquotes.edit("animated stickers and mp4 formats are not supported")
             return
     user = (await borg.get_entity(reply.forward.sender) if reply.fwd_from
